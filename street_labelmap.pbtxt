@@ -1,0 +1,19 @@
+item {
+    id: 1
+    name: 'person'
+}
+
+item {
+    id: 2
+    name: 'car'
+}
+
+item {
+    id: 3
+    name: 'cyclist'
+}
+
+item {
+    id: 4
+    name: 'bus'
+}
