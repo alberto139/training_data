@@ -1,5 +1,8 @@
 # Training Instructions
 
+This repositorie contains step by step instructions on how to train a deep learning model from the TensorFlow object detection zoo. We recomend that you clone this repository and use it as your "home repository" for training. You'll need to have some folders and remember their filepaths so we recomend that you use the same setup as that of this repository.
+
+
 ### Labeling Images
 Have a folder with images to be annotated. If you want to annotate a video you must break it down into individual frames. You can do that by using `misc/video2frames.py` in this repository.
 
@@ -14,6 +17,13 @@ We focus on labeling:
 
 To label each object use the terms above all in lowercase. When in doubt use your best judgement. Pressing `w` on your keyboard is a shortcut to make a rectangle. Click on the image to place one point of the rectangle. Note that the rectangle only requires 2 points. Make sure to include all of the object within the rectangle. Try to not to have a lot of extra space in the rectange but don't spend to much time on it. Make sure to label of the objects in the image before proceeding to the next. Once all the objects are labelled click the save icon this will generate a `.xml` file that should have the same name as the labeled image.
 
+### Setup Training
+The labeled images must be moved around and the .xml files must me converted to a .csv file. The .csv file is then used to create a tf record on which your model will train. 
+Most of the setup can be done bby running `python3 setup_training.py`. However you must change the paths to your own. 
+
+---
+If you ran `python3 setup_training.py` successfuly you can skip the next 3 steps.
+
 ### Move images with labels
 Use the `misc/move_images_with_labels.py` to move the labelled images to a seperate folder
 
@@ -24,6 +34,7 @@ Use `misc/xml_to_csv.py`
 Use `misc/generate_tfrecord.py`
 This script requires 2 arguments `--csv_input` and `--output_path`. An example might look like this:
 `python3 generate_tfrecord.py --csv_input=/home/alberto/Desktop/data/street_dataset/data/train_labels.csv  --output_path=/home/alberto/Desktop/data/street_dataset/data/train.record`
+---
 
 ### Download pre-trained model
 
