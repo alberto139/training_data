@@ -73,6 +73,8 @@ item {
     id: 4
     name: 'bus'
 }`
+
+
 replace all the instances that read PATH_TO_BE_CONFIGURED after `label_map_path` to the location of your labelmap file.
 example: 
 
