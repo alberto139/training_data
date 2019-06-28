@@ -34,6 +34,8 @@ Use `misc/xml_to_csv.py`
 Use `misc/generate_tfrecord.py`
 This script requires 2 arguments `--csv_input` and `--output_path`. An example might look like this:
 `python3 generate_tfrecord.py --csv_input=/home/alberto/Desktop/data/street_dataset/data/train_labels.csv  --output_path=/home/alberto/Desktop/data/street_dataset/data/train.record`
+
+
 ---
 
 ### Download pre-trained model
