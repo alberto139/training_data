@@ -116,10 +116,6 @@ from the models/research/object_detection directory run `python3 export_inferenc
 
 example:
 
-`python3 export_inference_graph.py --input_type image_tensor --pipeline_config_path /home/alberto/Desktop/CurbSpace/models/ssd_mobilenet_v1_fpn/pipeline.config \
-    --trained_checkpoint_prefix /home/alberto/Desktop/data/street_dataset/training_out/model.ckpt-11936 \
-    --output_directory /home/alberto/Desktop/CurbSpace/models/street_april9_2019`
 
-
-
+python3 object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path /home/alberto/Desktop/Repositories/training_data/models/ssd_mobilenet_v1_fpn/pipeline.config --trained_checkpoint_prefix /home/alberto/Desktop/training_data/training_out/model.ckpt-3611 --output_directory /home/alberto/Desktop/training_data/models/frozen_models
 ---
