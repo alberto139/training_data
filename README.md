@@ -116,6 +116,18 @@ from the models/research/object_detection directory run `python3 export_inferenc
 
 example:
 
-
+`
 python3 object_detection/export_inference_graph.py --input_type image_tensor --pipeline_config_path /home/alberto/Desktop/Repositories/training_data/models/ssd_mobilenet_v1_fpn/pipeline.config --trained_checkpoint_prefix /home/alberto/Desktop/training_data/training_out/model.ckpt-3611 --output_directory /home/alberto/Desktop/training_data/models/frozen_models
+`
 ---
+
+
+Lastly: You'll nee to run these commands from the models/research direcotry
+`# From tensorflow/models/research/
+export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+`
+
+`
+# If using Tensorflow 1.X:
+python object_detection/builders/model_builder_tf1_test.py
+`
